@@ -5,39 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/src/output.css" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'mahogany': '#2A1206',
-                        'deep-brown': '#1A0C04',
-                        'gold': '#C8973A',
-                        'gold-light': '#E8B86D',
-                        'cream': '#F5EDD8',
-                        'warm-white': '#FAF6EE',
-                        'text-muted': '#8B7355',
-                        'card-bg': '#321508',
-                        'border': 'rgba(200,151,58,0.25)',
-                        'overlay': 'rgba(26,12,4,0.82)'
-                    },
-                    fontFamily: {
-                        'display': ['Cormorant Garamond', 'serif'],
-                        'body': ['Raleway', 'sans-serif']
-                    },
-                    animation: {
-                        'fade-in-up': 'heroFade 1.2s ease forwards'
-                    },
-                    keyframes: {
-                        heroFade: {
-                            '0%': { opacity: '0', transform: 'translateY(30px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' }
-                        }
-                    }
-                }
-            }
-        }
-    </script>
 </head>
 
 <body>
@@ -82,12 +49,6 @@
             Reserve a Table
         </a>
 
-        <!-- Hamburger -->
-        <div id="hamburger" onclick="toggleMenu()" class="flex md:hidden flex-col gap-5px cursor-pointer">
-            <span class="block w-6 h-[1.5px] bg-[#F5EDD8]"></span>
-            <span class="block w-6 h-[1.5px] bg-[#F5EDD8]"></span>
-            <span class="block w-6 h-[1.5px] bg-[#F5EDD8]"></span>
-        </div>
     </nav>
 
     <!-- ═══════════════════ HOME ═══════════════════ -->
