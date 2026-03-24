@@ -8,9 +8,9 @@ Yalwa Club is a premium fine dining restaurant that combines traditional Nigeria
 
 ## Features
 
-- **Responsive Design**: Fully responsive layout that works seamlessly across all devices
-- **Modern Styling**: Built with Tailwind CSS for clean, maintainable styles
 - **Single Page Application**: All content in one HTML file with smooth section navigation
+- **Responsive Design**: Fully responsive layout that works seamlessly across all devices
+- **Modern Styling**: Built with Tailwind CSS v4.2.2 for clean, maintainable styles
 - **Interactive Elements**: Hover effects, transitions, and micro-interactions
 - **Accessibility**: Semantic HTML5 structure with proper heading hierarchy
 
@@ -29,10 +29,16 @@ Yalwa Club is a premium fine dining restaurant that combines traditional Nigeria
 - **Gold** (#C8973A): Primary accent color
 - **Cream** (#F5EDD8): Text and highlights
 - **Text Muted** (#8B7355): Secondary text
+- **Card BG** (#321508): Card backgrounds
+- **Border** (rgba(200,151,58,0.25)): Border color
+- **Overlay** (rgba(26,12,4,0.82)): Overlay color
 
 ### Typography
 - **Display Font**: Cormorant Garamond (serif) - Headings and elegant text
 - **Body Font**: Raleway (sans-serif) - Body copy and UI elements
+
+### Custom Animations
+- **fade-in-up**: Custom hero animation with fade and slide effects
 
 ## File Structure
 
@@ -40,12 +46,11 @@ Yalwa Club is a premium fine dining restaurant that combines traditional Nigeria
 yalwa-club/
 ├── index.html              # Main single-page application
 ├── src/
-│   ├── menu.html          # Menu page (modular structure)
-│   ├── about.html         # About page (modular structure)
-│   └── contact.html       # Contact page (modular structure)
-├── reuse-code/
-│   ├── nav.html           # Navigation component
-│   └── footer.html       # Footer component
+│   ├── input.css          # Tailwind CSS input file
+│   └── output.css         # Compiled Tailwind CSS
+├── node_modules/          # Node.js dependencies
+├── package.json           # Project dependencies and scripts
+├── package-lock.json      # Lock file for dependencies
 └── README.md             # This file
 ```
 
@@ -67,8 +72,9 @@ yalwa-club/
 ## Technologies Used
 
 - **HTML5**: Semantic markup structure
-- **Tailwind CSS**: Utility-first CSS framework
+- **Tailwind CSS v4.2.2**: Utility-first CSS framework
 - **Google Fonts**: Cormorant Garamond and Raleway typography
+- **Node.js**: Package management and build tools
 
 ## Key Features
 
@@ -105,6 +111,8 @@ yalwa-club/
 - [ ] Integrate with payment gateways
 - [ ] Add multilingual support
 - [ ] Implement PWA features
+- [ ] Add TypeScript support
+- [ ] Set up automated testing
 
 ## Contributing
 
