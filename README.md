@@ -101,7 +101,6 @@ yalwa-club/
 - Optimized for fast loading
 - Minimal external dependencies
 - Efficient CSS with Tailwind utilities
-- Semantic HTML for better SEO
 
 ## Future Enhancements
 
@@ -110,9 +109,7 @@ yalwa-club/
 - [ ] Add online ordering functionality
 - [ ] Integrate with payment gateways
 - [ ] Add multilingual support
-- [ ] Implement PWA features
 - [ ] Add TypeScript support
-- [ ] Set up automated testing
 
 ## Contributing
 
