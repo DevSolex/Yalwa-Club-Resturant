@@ -8,18 +8,18 @@ Yalwa Club is a premium fine dining restaurant that combines traditional Nigeria
 
 ## Features
 
-- **Single Page Application**: All content in one HTML file with smooth section navigation
+- **Multi-Page Application**: Separate HTML files for each section with consistent navigation
 - **Responsive Design**: Fully responsive layout that works seamlessly across all devices
 - **Modern Styling**: Built with Tailwind CSS v4.2.2 for clean, maintainable styles
 - **Interactive Elements**: Hover effects, transitions, and micro-interactions
 - **Accessibility**: Semantic HTML5 structure with proper heading hierarchy
 
-## Pages/Sections
+## Pages
 
-- **Home**: Hero section with features, opening hours, and chef's specials
-- **Menu**: Multi-category menu with tabbed navigation (Starters, Mains, Grills & Sides, Desserts, Drinks & Bar)
-- **About**: Restaurant story, team profiles, and statistics
-- **Contact**: Contact information, reservation form, and interactive map
+- **Home** (`index.html`): Hero section with features, opening hours, and chef's specials
+- **Menu** (`src/menu.html`): Multi-category menu with tabbed navigation (Starters, Mains, Grills & Sides, Desserts, Drinks & Bar)
+- **About** (`src/about.html`): Restaurant story, team profiles, and statistics
+- **Contact** (`src/contact.html`): Contact information, reservation form, and interactive map
 
 ## Design System
 
@@ -44,14 +44,19 @@ Yalwa Club is a premium fine dining restaurant that combines traditional Nigeria
 
 ```
 yalwa-club/
-├── index.html              # Main single-page application
+├── index.html              # Main homepage
 ├── src/
-│   ├── input.css          # Tailwind CSS input file
-│   └── output.css         # Compiled Tailwind CSS
-├── node_modules/          # Node.js dependencies
-├── package.json           # Project dependencies and scripts
-├── package-lock.json      # Lock file for dependencies
-└── README.md             # This file
+│   ├── about.html          # About page
+│   ├── contact.html        # Contact page
+│   ├── menu.html           # Menu page
+│   ├── input.css           # Tailwind CSS input file
+│   ├── output.css          # Compiled Tailwind CSS
+│   └── images/             # Image assets
+├── .gitignore              # Git ignore file
+├── node_modules/           # Node.js dependencies
+├── package.json            # Project dependencies and scripts
+├── package-lock.json       # Lock file for dependencies
+└── README.md               # This file
 ```
 
 ## Getting Started

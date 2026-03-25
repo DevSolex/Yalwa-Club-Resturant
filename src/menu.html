@@ -1,0 +1,275 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fbf4810423.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- ═══════════════════ NAV ═══════════════════ -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-1000 flex items-center justify-between px-16 py-5
+  bg-linear-to-b from-[rgba(26,12,4,0.95)] to-transparent backdrop-blur-md
+  border-b border-[rgba(200,151,58,0.25)] transition-all duration-300">
+
+        <!-- Logo -->
+        <a href="#" onclick="navigate('home')" class="text-[1.9rem] font-semibold tracking-[0.12em] text-[#C8973A]
+    font-[Cormorant_Garamond] no-underline">
+            YALWA<span class="text-[#F5EDD8] font-light italic">club</span>
+        </a>
+
+        <!-- Nav Links -->
+        <ul id="navLinks" class="hidden md:flex gap-10 list-none">
+            <li>
+                <a href="/index.html" class="relative text-[#F5EDD8] text-xs tracking-[0.2em] uppercase font-medium
+        hover:text-[#C8973A] transition-colors duration-200
+        after:content-[''] after:absolute after:left-0 after:bottom-0
+        after:w-0 after:h-px after:bg-[#C8973A]
+        after:transition-all after:duration-300 hover:after:w-full">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="menu.html" class="relative text-[#F5EDD8] text-xs tracking-[0.2em] uppercase font-medium
+        hover:text-[#C8973A] transition-colors duration-200
+        after:content-[''] after:absolute after:left-0 after:bottom-0
+        after:w-0 after:h-px after:bg-[#C8973A]
+        after:transition-all after:duration-300 hover:after:w-full">Menu</a>
+            </li>
+            <li>
+                <a href="about.html" class="relative text-[#F5EDD8] text-xs tracking-[0.2em] uppercase font-medium
+        hover:text-[#C8973A] transition-colors duration-200
+        after:content-[''] after:absolute after:left-0 after:bottom-0
+        after:w-0 after:h-px after:bg-[#C8973A]
+        after:transition-all after:duration-300 hover:after:w-full">About</a>
+            </li>
+            <li>
+                <a href="contact.html" class="relative text-[#F5EDD8] text-xs tracking-[0.2em] uppercase font-medium
+        hover:text-[#C8973A] transition-colors duration-200
+        after:content-[''] after:absolute after:left-0 after:bottom-0
+        after:w-0 after:h-px after:bg-[#C8973A]
+        after:transition-all after:duration-300 hover:after:w-full">Contact</a>
+            </li>
+        </ul>
+
+        <!-- Reserve Button -->
+        <a href="#" onclick="navigate('contact')" class="hidden md:inline-block border border-[#C8973A] text-[#C8973A]
+    px-5 py-2 text-[0.7rem] tracking-[0.18em] uppercase
+    hover:bg-[#C8973A] hover:text-[#1A0C04]
+    transition-all duration-300">
+            Reserve a Table
+        </a>
+
+    </nav>
+
+    <!-- ═══════════════════ MENU [IREDIA]═══════════════════ -->
+
+     <section class="bg-[#1A0C04]">
+        <div class="text-center">
+        <h2 class="text-[#C8973A] text-sm">CRAFTED WITH PASSION</h2>
+        <h2 class="text-4xl text-white sm:text-4xl">Our <em class="text-[#C8973A]">Menu</em></h2>
+        </div>
+
+
+        <div>
+            <!-- div containing menu text -->
+             <div class="text-[#C8973A] flex justify-center gap-9 mt-3 max-sm:gap-2 max-sm:mx-5 max-sm:text-xs">
+                <p>STARTER</p>
+                <P>MAIN COURSE</P>
+                <P>SIDE & GRILLS</P>
+                <P>DESSERTS</P>
+                <P>DRINKS & BARS</P>
+             </div>
+             <p class="mt-5 border border-[#C8973A]"></p>
+        </div>
+
+
+        <!-- starters div -->
+         <div class="text-center">
+            <p class="text-white">Starters</p>
+            <p class="text-[#C8973A] text-[13px]">light beginnings that awaken the palate - traditional flavours reimagined</p>
+         </div>
+
+         <!-- div holding the first set of cards -->
+          <div class="flex justify-center gap-3.5 mt-8 max-sm:flex-col max-sm:m-auto max-sm:w-screen">
+
+            <div class="bg-[#753d28] w-[25vw] h-[35vh] pt-3 max-sm:w-[80vw] max-sm:ml-8">
+
+                <img src="src/images/51693.jpg" alt="" class="w-[10vw] h-[13vh] m-auto">
+
+
+                <div class="px-3.5 mt-3.5">
+             <p class="text-white">Pepper soup Veloute</p>
+                <p class="text-[#c8973a]">A safe take on the classic - aromatic pepper soup broth with sous vide catfish quenelles and uda oil drizzle</p>
+                </div>
+
+
+            <div class="flex justify-around mt-2.5">
+                <p class="text-[#C8973A] h-[2vh]">₦5,200</p>
+                <p class="text-[#C8973A] text-[13px] border border-[#c8973a] h-[2vh]">VEGAN</p>
+            </div>
+            </div>
+
+
+            <div class="bg-[#753d28] w-[25vw] h-[35vh] pt-3 max-sm:w-[80vw] max-sm:ml-8">
+
+                <img src="src/images/squid.jpg" alt="" class="w-[10vw] h-[13vh] m-auto">
+
+                <div class="px-3.5 mt-3.5">
+                 <p class="text-white">Japanese squid style</p>
+                <p class="text-[#c8973a]">A safe take on the classic - aromatic Japanese squid with sous vide catfish quenelles and uda oil drizzle</p>
+                </div>
+
+              <div class="flex justify-around mt-2.5">
+                <p class="text-[#C8973A]">₦7,200</p>
+                <p class="text-[#C8973A] text-[13px] border border-[#c8973a] h-[2vh]">VEGAN</p>
+            </div>
+            </div>
+
+
+            <div class="bg-[#753d28] w-[25vw] h-[35vh] pt-3 max-sm:w-[80vw] max-sm:ml-8">
+
+                 <img src="src/images/fresh-shrimp-prawn.jpg" alt="" class="w-[10vw] h-[13vh] m-auto">
+
+                 <div class="px-3.5 mt-3.5">
+                 <p class="text-white">shrimp special</p>
+                <p class="text-[#c8973a]">A safe take on the classic - richly flavoured shrimp with sous vide catfish quenelles and uda oil drizzle</p>
+                 </div>
+
+              <div class="flex justify-around mt-2.5">
+                <p class="text-[#C8973A]">₦11,200</p>
+                <p class="text-[#C8973A] text-[13px] border border-[#c8973a] h-[2vh]">VEGAN</p>
+            </div>
+            </div>
+          </div>
+
+          <!-- div holding the bigger size cards of the first 3 -->
+
+          <div class="mt-3.5 flex justify-center gap-3.5 max-sm:flex-col">
+            <div class="bg-[#753d28] w-[25vw] h-[35vh] pt-3 max-sm:w-[80vw] max-sm:ml-8">
+
+                 <img src="src/images/blue bowl.jpg" alt="" class="w-[10vw] h-[13vh] m-auto">
+
+                 <div class="px-3.5 mt-3.5">
+                <p class="text-white">Pepper soup Veloute</p>
+                <p class="text-[#c8973a]">A safe take on the classic - aromatic pepper soup broth with sous vide catfish quenelles and uda oil drizzle</p>
+                 </div>
+
+                <!-- price and signature div -->
+                 <div class="flex justify-around mt-2.5">
+                    <p class="text-[#c8973a]">₦15,500</p>
+                     <p class="text-[#C8973A] text-[13px] border border-[#c8973a] h-[2vh]">SIGNATURE</p>
+                 </div>
+            </div>
+
+              <div class="bg-[#753d28] w-[25vw] h-[35vh] pt-3 max-sm:w-[80vw] max-sm:ml-8">
+
+                 <img src="src/images/ramen.jpg" alt="" class="w-[10vw] h-[13vh] m-auto">
+
+                 <div class="px-3.5 mt-3.5">
+                <p class="text-white">Asia inspired ramen</p>
+                <p class="text-[#c8973a]">bringing you a taste from another continent - aromatic pepper soup broth with sous vide catfish quenelles and uda oil drizzle</p>
+                 </div>
+
+                <!-- price and signature div -->
+                 <div class="flex justify-around mt-2.5">
+                    <p class="text-[#c8973a]">₦9,900</p>
+                     <p class="text-[#C8973A] text-[13px] border border-[#c8973a] h-[2vh]">SIGNATURE</p>
+                 </div>
+            </div>
+
+              <div class="bg-[#753d28] w-[25vw] h-[35vh] pt-3 max-sm:w-[80vw] max-sm:ml-8">
+
+                 <img src="src/images/caviar.jpg" alt="" class="w-[10vw] h-[13vh] m-auto">
+
+                 <div class="px-3.5 mt-3.5">
+                <p class="text-white">Rich caviar blend</p>
+                <p class="text-[#c8973a]">A safe take on the classic - aromatic pepper soup broth with sous vide catfish quenelles and uda oil drizzle</p>
+                 </div>
+
+                <!-- price and signature div -->
+                 <div class="flex justify-around mt-28">
+                    <p class="text-[#c8973a]">₦11,500</p>
+                     <p class="text-[#C8973A] text-[13px] border border-[#c8973a] h-[2vh]">SIGNATURE</p>
+                 </div>
+            </div>
+          </div>
+     </section>
+
+    <footer class="bg-[1A0C04] border-t border-[rgba(200,151,58,0.25)]
+  px-6 md:px-16 py-16 text-center mb-0">
+
+        <!-- Logo -->
+        <div class="text-[2.8rem] font-light text-[#C8973A]
+    tracking-widest mb-2 font-[Cormorant_Garamond]">
+            YALWA
+        </div>
+
+        <!-- Tagline -->
+        <div class="text-[0.72rem] tracking-[0.3em] uppercase
+    text-[#8B7355] mb-10">
+            Fine Dining & Lounge · Jos, Nigeria
+        </div>
+
+        <!-- Links -->
+        <ul class="flex flex-wrap justify-center gap-10 mb-10">
+            <li>
+                <a href="#" onclick="navigate('home')" class="text-[#8B7355] text-xs tracking-[0.2em] uppercase
+        hover:text-[#C8973A] transition-colors duration-200">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="#" onclick="navigate('menu')" class="footer-link">
+                    Menu
+                </a>
+            </li>
+            <li>
+                <a href="#" onclick="navigate('about')" class="footer-link">
+                    About
+                </a>
+            </li>
+            <li>
+                <a href="#" onclick="navigate('contact')" class="footer-link">
+                    Contact
+                </a>
+            </li>
+            <li>
+                <a href="#" class="footer-link">
+                    Privacy
+                </a>
+            </li>
+        </ul>
+
+        <!-- Social Icons -->
+        <div class="flex justify-center gap-5 mb-10">
+            <a href="#" title="Instagram" class="w-10 h-10 flex items-center justify-center
+      border border-[rgba(200,151,58,0.25)]
+      text-[#8B7355]
+      hover:border-[#C8973A] hover:text-[#C8973A]
+      transition-all duration-200">
+                📷
+            </a>
+            <a href="#" title="Facebook" class="social-btn">
+                📘
+            </a>
+            <a href="#" title="Twitter/X" class="social-btn">
+                🐦
+            </a>
+            <a href="#" title="WhatsApp" class="social-btn">
+                💬
+            </a>
+        </div>
+
+        <!-- Copyright -->
+        <p class="text-[0.72rem] tracking-widest
+    text-[rgba(139,115,85,0.5)]">
+            © 2025 Yalwa Club. All rights reserved. Crafted with ♥ in Jos.
+        </p>
+
+    </footer>
+</body>
+
+</html>
