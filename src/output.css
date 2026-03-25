@@ -808,6 +808,9 @@
   .bg-\[1A0C04\] {
     background-color: 1A0C04;
   }
+  .bg-\[rgba\(200\,151\,58\,0\.25\)\] {
+    background-color: rgba(200,151,58,0.25);
+  }
   .bg-amber-950 {
     background-color: var(--color-amber-950);
   }
