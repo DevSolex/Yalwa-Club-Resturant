@@ -23,7 +23,7 @@
         <!-- Nav Links -->
         <ul id="navLinks" class="hidden md:flex gap-10 list-none">
             <li>
-                <a href="#" onclick="navigate('home')" class="relative text-[#F5EDD8] text-xs tracking-[0.2em] uppercase font-medium
+                <a href="#" class="relative text-[#F5EDD8] text-xs tracking-[0.2em] uppercase font-medium
         hover:text-[#C8973A] transition-colors duration-200
         after:content-[''] after:absolute after:left-0 after:bottom-0
         after:w-0 after:h-px after:bg-[#C8973A]
@@ -55,7 +55,7 @@
         </ul>
 
         <!-- Reserve Button -->
-        <a href="#" onclick="navigate('contact')" class="hidden md:inline-block border border-[#C8973A] text-[#C8973A]
+        <a href="/src/contact.html" class="hidden md:inline-block border border-[#C8973A] text-[#C8973A]
     px-5 py-2 text-[0.7rem] tracking-[0.18em] uppercase
     hover:bg-[#C8973A] hover:text-[#1A0C04]
     transition-all duration-300">
@@ -65,80 +65,80 @@
     </nav>
 
     <!-- ═══════════════════ HOME ═══════════════════ -->
-    <section id="home" class="block">
+    <section id="home" class="block bg-[#1A0C04]">
 
-        <div class="hero relative h-screen min-h-[680px] flex items-center justify-center overflow-hidden">
+        <div class="relative h-screen min-h-[680px] flex items-center justify-center overflow-hidden">
             <div
-                class="hero-bg absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_60%_40%,rgba(200,151,58,0.08)_0%,transparent_70%),radial-gradient(ellipse_60%_80%_at_20%_70%,rgba(42,18,6,0.6)_0%,transparent_60%),linear-gradient(135deg,#1A0C04_0%,#2A1206_40%,#1A0C04_100%)]">
+                class="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_60%_40%,rgba(200,151,58,0.08)_0%,transparent_70%),radial-gradient(ellipse_60%_80%_at_20%_70%,rgba(42,18,6,0.6)_0%,transparent_60%),linear-gradient(135deg,#1A0C04_0%,#2A1206_40%,#1A0C04_100%)]">
             </div>
             <div
-                class="hero-arch absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[520px] h-[620px] border border-[rgba(200,151,58,0.18)] rounded-t-[260px] before:content-[''] before:absolute before:top-3 before:left-3 before:right-3 before:bottom-0 before:border before:border-[rgba(200,151,58,0.10)] before:rounded-t-[248px]">
+                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[520px] h-[620px] border border-[rgba(200,151,58,0.18)] rounded-t-[260px] before:content-[''] before:absolute before:top-3 before:left-3 before:right-3 before:bottom-0 before:border before:border-[rgba(200,151,58,0.10)] before:rounded-t-[248px]">
             </div>
-            <div class="hero-content relative text-center z-[2] animate-fade-in-up">
+            <div class="relative text-center z-[2] animate-fade-in-up">
                 <p
-                    class="hero-eyebrow text-[0.72rem] tracking-[0.35em] uppercase text-[#C8973A] mb-[1.6rem] font-medium">
+                    class="text-[0.72rem] tracking-[0.35em] uppercase text-[#C8973A] mb-[1.6rem] font-medium">
                     Jos's Premier Dining & Lounge</p>
                 <h1
-                    class="hero-title font-display text-[clamp(4.5rem,10vw,8.5rem)] font-light leading-[0.92] text-[#F5EDD8] mb-[0.3rem]">
+                    class="font-display text-[clamp(4.5rem,10vw,8.5rem)] font-light leading-[0.92] text-[#F5EDD8] mb-[0.3rem]">
                     YALWA<br><em class="italic text-[#C8973A] font-light">Club</em>
                 </h1>
-                <p class="hero-sub text-[0.9rem] tracking-[0.25em] text-[#8B7355] uppercase mb-[3rem] mt-[1.2rem]">
+                <p class="text-[0.9rem] tracking-[0.25em] text-[#8B7355] uppercase mb-[3rem] mt-[1.2rem]">
                     Where Flavour Meets Elegance</p>
-                <div class="hero-ctas flex gap-4 justify-center flex-wrap">
-                    <a href="#menu"
-                        class="btn-primary bg-[#C8973A] text-[#1A0C04] border-none px-10 py-4 font-body text-[0.75rem] tracking-[0.2em] uppercase font-semibold cursor-pointer no-underline inline-block transition-all duration-300 hover:bg-gold-light">Explore
+                <div class="flex gap-4 justify-center flex-wrap">
+                    <a href="/src/menu.html"
+                        class="bg-[#C8973A] text-[#1A0C04] border-none px-10 py-4 font-body text-[0.75rem] tracking-[0.2em] uppercase font-semibold cursor-pointer no-underline inline-block transition-all duration-300 hover:bg-gold-light">Explore
                         Menu</a>
-                    <a href="#contact"
-                        class="btn-outline bg-transparent text-[#F5EDD8] border border-[rgba(245,237,216,0.35)] px-10 py-4 font-body text-[0.75rem] tracking-[0.2em] uppercase font-medium cursor-pointer no-underline inline-block transition-all duration-300 hover:border-gold hover:text-gold">Reserve
+                    <a href="/src/contact.html"
+                        class="bg-transparent text-[#F5EDD8] border border-[rgba(245,237,216,0.35)] px-10 py-4 font-body text-[0.75rem] tracking-[0.2em] uppercase font-medium cursor-pointer no-underline inline-block transition-all duration-300 hover:border-gold hover:text-gold">Reserve
                         a Table</a>
                 </div>
             </div>
             <div
-                class="hero-scroll absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 text-text-muted text-[0.65rem] tracking-[0.25em] uppercase after:content-[''] after:block after:w-px after:h-[50px] after:bg-gradient-to-b after:from-gold after:to-transparent after:animate-pulse">
+                class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 text-[#8B7355] text-[0.65rem] tracking-[0.25em] uppercase after:content-[''] after:block after:w-px after:h-12.5 after:bg-linear-to-b after:from-gold after:to-transparent after:animate-pulse">
                 Scroll</div>
         </div>
 
         <!-- Features -->
-        <div class="max-w-[1280px] mx-auto px-16 pt-20 pb-0">
-            <p class="section-label text-[0.68rem] tracking-[0.35em] uppercase text-gold font-medium mb-4 text-center">
+        <div class="max-w-7xl mx-auto px-16 pt-20 pb-0">
+            <p class="text-[0.68rem] tracking-[0.35em] uppercase text-[#C8973A] font-medium mb-4 text-center">
                 Our Promise</p>
             <h2
-                class="section-title font-display text-[clamp(2.4rem,4vw,3.8rem)] font-light text-center text-cream leading-[1.15] mb-6">
+                class="font-display text-[clamp(2.4rem,4vw,3.8rem)] font-light text-center text-[#F5EDD8] leading-[1.15] mb-6">
                 An Experience <em class="italic text-gold">Beyond</em> the Plate</h2>
-            <p class="section-lead text-center text-text-muted text-[0.9rem] leading-[1.8] max-w-[560px] mx-auto mb-16">
+            <p class="text-center text-[#8B7355] text-[0.9rem] leading-[1.8] max-w-[560px] mx-auto mb-16">
                 From intimate candlelit dinners to vibrant weekend brunches, Yalwa Club is crafted for those who
                 appreciate the finer things.</p>
-            <div class="features-grid grid grid-cols-1 md:grid-cols-3 gap-px bg-border border border-border mt-20">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-border border border-[rgba(200,151,58,0.25)] mt-20">
                 <div
-                    class="feature-item bg-deep-brown px-10 py-12 text-center transition-colors duration-300 hover:bg-mahogany">
-                    <span class="feature-icon text-[2.2rem] mb-5 block">🍽️</span>
-                    <h3 class="font-display text-[1.5rem] font-normal text-cream mb-3">Fine Dining</h3>
-                    <p class="text-[0.83rem] text-text-muted leading-[1.8]">Artfully composed dishes rooted in West
+                    class="bg-[#1A0C04] px-10 py-12 text-center transition-colors duration-300 hover:bg-[#2A1206]">
+                    <span class="text-[2.2rem] mb-5 block">🍽️</span>
+                    <h3 class="text-[1.5rem] font-normal text-[#F5EDD8] mb-3">Fine Dining</h3>
+                    <p class="text-[0.83rem] text-[#8B7355] leading-[1.8]">Artfully composed dishes rooted in West
                         African traditions, elevated with contemporary technique and the finest local ingredients.</p>
                 </div>
                 <div
-                    class="feature-item bg-deep-brown px-10 py-12 text-center transition-colors duration-300 hover:bg-mahogany">
-                    <span class="feature-icon text-[2.2rem] mb-5 block">🥂</span>
-                    <h3 class="font-display text-[1.5rem] font-normal text-cream mb-3">Craft Cocktails</h3>
-                    <p class="text-[0.83rem] text-text-muted leading-[1.8]">Our mixologists blend heritage botanicals
+                    class="bg-[#1A0C04] px-10 py-12 text-center transition-colors duration-300 hover:bg-[#2A1206]">
+                    <span class="text-[2.2rem] mb-5 block">🥂</span>
+                    <h3 class="text-[1.5rem] font-normal text-[#F5EDD8] mb-3">Craft Cocktails</h3>
+                    <p class="text-[0.83rem] text-[#8B7355] leading-[1.8]">Our mixologists blend heritage botanicals
                         with modern flair — from palm-wine spritzers to aged rum infusions.</p>
                 </div>
                 <div
-                    class="feature-item bg-deep-brown px-10 py-12 text-center transition-colors duration-300 hover:bg-mahogany">
-                    <span class="feature-icon text-[2.2rem] mb-5 block">🎷</span>
-                    <h3 class="font-display text-[1.5rem] font-normal text-cream mb-3">Live Music</h3>
-                    <p class="text-[0.83rem] text-text-muted leading-[1.8]">Wednesday through Saturday evenings, immerse
+                    class="bg-[#1A0C04] px-10 py-12 text-center transition-colors duration-300 hover:bg-[#2A1206]">
+                    <span class="text-[2.2rem] mb-5 block">🎷</span>
+                    <h3 class="font-display text-[1.5rem] font-normal text-[#F5EDD8] mb-3">Live Music</h3>
+                    <p class="text-[0.83rem] text-[#8B7355] leading-[1.8]">Wednesday through Saturday evenings, immerse
                         yourself in jazz, Afrobeats, and soul performed by Abuja's finest artists.</p>
                 </div>
             </div>
         </div>
 
         <!-- Opening Hours Strip -->
-        <div class="hours-strip bg-mahogany border-t border-b border-border px-16 py-16 mt-20">
+        <div class="bg-[#2A1206] border-t border-b border-[rgba(200,151,58,0.25)] px-16 py-16 mt-20">
             <div
-                class="hours-inner max-w-[960px] mx-auto grid grid-cols-1 lg:grid-cols-[auto_1fr_auto] gap-12 items-start">
+                class="max-w-[960px] mx-auto grid grid-cols-1 lg:grid-cols-[auto_1fr_auto] gap-12 items-start">
                 <div
-                    class="hours-heading font-display text-[1.4rem] font-normal text-gold writing-mode-vertical-rl text-orientation-mixed transform rotate-180 tracking-[0.2em] lg:block hidden">
+                    class="font-display text-[1.4rem] font-normal text-[#C8973A] writing-mode-vertical-rl text-orientation-mixed transform rotate-90 tracking-[0.2em] lg:block hidden">
                     Hours</div>
                 <div class="hours-table grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-16">
                     <div class="hours-row flex justify-between gap-8"><span
@@ -178,84 +178,84 @@
 
         <!-- Chef's Specials Preview -->
         <div class="max-w-[1280px] mx-auto px-16 py-28">
-            <p class="section-label text-[0.68rem] tracking-[0.35em] uppercase text-gold font-medium mb-4 text-center">
+            <p class="text-[0.68rem] tracking-[0.35em] uppercase text-[#C8973A] font-medium mb-4 text-center">
                 Chef's Selection</p>
             <h2
-                class="section-title font-display text-[clamp(2.4rem,4vw,3.8rem)] font-light text-center text-cream leading-[1.15] mb-6">
-                Tonight's <em class="italic text-gold">Specials</em></h2>
-            <p class="section-lead text-center text-text-muted text-[0.9rem] leading-[1.8] max-w-[560px] mx-auto mb-16">
+                class="font-display text-[clamp(2.4rem,4vw,3.8rem)] font-light text-center text-[#F5EDD8] leading-[1.15] mb-6">
+                Tonight's <em class="italic text-[#C8973A]">Specials</em></h2>
+            <p class="text-center text-[#8B7355] text-[0.9rem] leading-[1.8] max-w-[560px] mx-auto mb-16">
                 Seasonal ingredients, bold imagination. A rotating showcase from our Executive Chef.</p>
-            <div class="specials-grid grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div
-                    class="special-card relative overflow-hidden bg-card-bg border border-border transition-all duration-400 hover:-translate-y-6 hover:shadow-[0_20px_60px_rgba(0,0,0,0.5)]">
+                    class="relative overflow-hidden bg-card-bg border border-[rgba(200,151,58,0.25)] transition-all duration-400 hover:-translate-y-6 hover:shadow-[0_20px_60px_rgba(0,0,0,0.5)]">
                     <div
-                        class="special-img w-full h-[220px] flex items-center justify-center text-[5rem] bg-gradient-to-br from-mahogany to-card-bg relative overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-t before:from-card-bg before:to-transparent">
+                        class="w-full h-[220px] flex items-center justify-center text-[5rem] bg-gradient-to-br from-[#2A1206] to-card-bg relative overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-t before:from-card-bg before:to-transparent">
                         🥩</div>
-                    <div class="special-body p-6">
-                        <span class="special-tag text-[0.65rem] tracking-[0.25em] uppercase text-gold mb-2 block">Chef's
+                    <div class="p-6">
+                        <span class="text-[0.65rem] tracking-[0.25em] uppercase text-[#C8973A] mb-2 block">Chef's
                             Special</span>
-                        <h3 class="font-display text-[1.5rem] font-normal text-cream mb-2">Ofe Akwu Braised Short Rib
+                        <h3 class="text-[1.5rem] font-normal text-[#F5EDD8] mb-2">Ofe Akwu Braised Short Rib
                         </h3>
-                        <p class="text-[0.8rem] text-text-muted leading-[1.7] mb-4">48-hour sous vide short rib in palm
+                        <p class="text-[0.8rem] text-[#8B7355] leading-[1.7] mb-4">48-hour sous vide short rib in palm
                             nut reduction, served with fermented locust bean jus and roasted plantain purée.</p>
-                        <div class="food-card-footer flex justify-between items-center">
-                            <span class="special-price font-display text-[1.3rem] text-gold">₦18,500</span>
-                            <div class="food-tags flex gap-1 flex-wrap"><span
-                                    class="food-tag text-[0.6rem] tracking-[0.1em] uppercase border border-border text-text-muted px-2 py-0.5">Signature</span>
+                        <div class="flex justify-between items-center">
+                            <span class="font-display text-[1.3rem] text-[#C8973A]">₦18,500</span>
+                            <div class="flex gap-1 flex-wrap"><span
+                                    class="text-[0.6rem] tracking-[0.1em] uppercase border border-[rgba(200,151,58,0.25)] text-[#8B7355] px-2 py-0.5">Signature</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div
-                    class="special-card relative overflow-hidden bg-card-bg border border-border transition-all duration-400 hover:-translate-y-6 hover:shadow-[0_20px_60px_rgba(0,0,0,0.5)]">
+                    class="relative overflow-hidden bg-card-bg border border-[rgba(200,151,58,0.25)] transition-all duration-400 hover:-translate-y-6 hover:shadow-[0_20px_60px_rgba(0,0,0,0.5)]">
                     <div
-                        class="special-img w-full h-[220px] flex items-center justify-center text-[5rem] bg-gradient-to-br from-mahogany to-card-bg relative overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-t before:from-card-bg before:to-transparent">
+                        class="w-full h-[220px] flex items-center justify-center text-[5rem] bg-gradient-to-br from-[#2A1206] to-card-bg relative overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-t before:from-card-bg before:to-transparent">
                         🦞</div>
-                    <div class="special-body p-6">
+                    <div class="p-6">
                         <span
-                            class="special-tag text-[0.65rem] tracking-[0.25em] uppercase text-gold mb-2 block">Seafood</span>
-                        <h3 class="font-display text-[1.5rem] font-normal text-cream mb-2">Coconut Pepper Lobster Bisque
+                            class="text-[0.65rem] tracking-[0.25em] uppercase text-[#C8973A] mb-2 block">Seafood</span>
+                        <h3 class="font-display text-[1.5rem] font-normal text-[#F5EDD8] mb-2">Coconut Pepper Lobster Bisque
                         </h3>
-                        <p class="text-[0.8rem] text-text-muted leading-[1.7] mb-4">Whole local lobster tail in a spiced
+                        <p class="text-[0.8rem] text-[#8B7355] leading-[1.7] mb-4">Whole local lobster tail in a spiced
                             coconut-pepper broth, finished with toasted egusi cream and microgreens.</p>
-                        <div class="food-card-footer flex justify-between items-center">
-                            <span class="special-price font-display text-[1.3rem] text-gold">₦24,000</span>
-                            <div class="food-tags flex gap-1 flex-wrap"><span
-                                    class="food-tag text-[0.6rem] tracking-[0.1em] uppercase border border-border text-text-muted px-2 py-0.5">Seasonal</span>
+                        <div class="flex justify-between items-center">
+                            <span class="font-display text-[1.3rem] text-[#C8973A]">₦24,000</span>
+                            <div class="flex gap-1 flex-wrap"><span
+                                    class="text-[0.6rem] tracking-[0.1em] uppercase border border-[rgba(200,151,58,0.25)] text-[#8B7355] px-2 py-0.5">Seasonal</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div
-                    class="special-card relative overflow-hidden bg-card-bg border border-border transition-all duration-400 hover:-translate-y-6 hover:shadow-[0_20px_60px_rgba(0,0,0,0.5)]">
+                    class="relative overflow-hidden bg-card-bg border border-[rgba(200,151,58,0.25)] transition-all duration-400 hover:-translate-y-6 hover:shadow-[0_20px_60px_rgba(0,0,0,0.5)]">
                     <div
-                        class="special-img w-full h-[220px] flex items-center justify-center text-[5rem] bg-gradient-to-br from-mahogany to-card-bg relative overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-t before:from-card-bg before:to-transparent">
+                        class="w-full h-[220px] flex items-center justify-center text-[5rem] bg-gradient-to-br from-[#2A1206] to-card-bg relative overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-t before:from-card-bg before:to-transparent">
                         🍮</div>
-                    <div class="special-body p-6">
+                    <div class="p-6">
                         <span
-                            class="special-tag text-[0.65rem] tracking-[0.25em] uppercase text-gold mb-2 block">Dessert</span>
-                        <h3 class="font-display text-[1.5rem] font-normal text-cream mb-2">Zobo Panna Cotta</h3>
-                        <p class="text-[0.8rem] text-text-muted leading-[1.7] mb-4">Silky hibiscus-infused Italian cream
+                            class="text-[0.65rem] tracking-[0.25em] uppercase text-[#C8973A] mb-2 block">Dessert</span>
+                        <h3 class="text-[1.5rem] font-normal text-[#F5EDD8] mb-2">Zobo Panna Cotta</h3>
+                        <p class="text-[0.8rem] text-[#8B7355] leading-[1.7] mb-4">Silky hibiscus-infused Italian cream
                             set with clove and ginger syrup, served with chin-chin crumble and mango gel.</p>
-                        <div class="food-card-footer flex justify-between items-center">
-                            <span class="special-price font-display text-[1.3rem] text-gold">₦7,500</span>
-                            <div class="food-tags flex gap-1 flex-wrap"><span
-                                    class="food-tag text-[0.6rem] tracking-[0.1em] uppercase border border-border text-text-muted px-2 py-0.5">Vegan
+                        <div class="flex justify-between items-center">
+                            <span class="font-display text-[1.3rem] text-[#C8973A]">₦7,500</span>
+                            <div class="flex gap-1 flex-wrap"><span
+                                    class="text-[0.6rem] tracking-[0.1em] uppercase border border-[rgba(200,151,58,0.25)] text-[#8B7355] px-2 py-0.5">Vegan
                                     Option</span></div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="text-center mt-12">
-                <a href="#menu"
-                    class="btn-primary bg-gold text-deep-brown border-none px-10 py-4 font-body text-[0.75rem] tracking-[0.2em] uppercase font-semibold cursor-pointer no-underline inline-block transition-all duration-300 hover:bg-gold-light">View
+                <a href="/src/menu.html"
+                    class="bg-[#C8973A] text-[#1A0C04] border-none px-10 py-4 font-body text-[0.75rem] tracking-[0.2em] uppercase font-semibold cursor-pointer no-underline inline-block transition-all duration-300 hover:bg-gold-light">View
                     Full Menu</a>
             </div>
         </div>
 
     </section>
 
-    <footer class="bg-[1A0C04] border-t border-[rgba(200,151,58,0.25)]
+    <footer class="bg-[#1A0C04] border-t border-[rgba(200,151,58,0.25)]
   px-6 md:px-16 py-16 text-center mb-0">
 
         <!-- Logo -->
