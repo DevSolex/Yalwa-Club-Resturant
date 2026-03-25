@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About – YALWAclub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold:        '#C8973A',
+            cream:       '#F5EDD8',
+            'brown-dark':'#1A0C04',
+            'brown-mid': '#2C1507',
+            'brown-card':'#3A1E0A',
+            muted:       '#8B7355',
+          },
+          fontFamily: {
+            display: ['"Cormorant Garamond"', 'serif'],
+            body:    ['Montserrat', 'sans-serif'],
+          },
+          fontSize: {
+            'fluid-hero': 'clamp(3.2rem, 7vw, 6.5rem)',
+            'fluid-h2':   'clamp(2.2rem, 4vw, 3.8rem)',
+            'fluid-cta':  'clamp(2.2rem, 5vw, 4.5rem)',
+          },
+          keyframes: {
+            fadeUp: {
+              '0%':   { opacity: '0', transform: 'translateY(24px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+          },
+          animation: {
+            'fade-up-1': 'fadeUp 0.8s ease forwards 0.2s',
+            'fade-up-2': 'fadeUp 0.9s ease forwards 0.4s',
+            'fade-up-3': 'fadeUp 0.8s ease forwards 0.6s',
+            'fade-up-4': 'fadeUp 0.8s ease forwards 0.75s',
+            'fade-up-5': 'fadeUp 0.8s ease forwards 1s',
+            'fade-up-v': 'fadeUp 1s ease forwards 0.5s',
+            'fade-up-q': 'fadeUp 0.9s ease forwards 0.8s',
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    /* Fonts & base */
+    body { font-family: 'Montserrat', sans-serif; }
+    .font-display { font-family: 'Cormorant Garamond', serif; }
+
+    /* Gold border utility */
+    .border-gold-faint { border-color: rgba(200,151,58,0.25); }
+
+    /* Animations start hidden */
+    .anim-hidden { opacity: 0; }
+
+    /* Scroll-reveal */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.75s ease, transform 0.75s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .delay-1 { transition-delay: 0.10s; }
+    .delay-2 { transition-delay: 0.22s; }
+    .delay-3 { transition-delay: 0.34s; }
+
+    /* Nav link underline animation */
+    .nav-link { position: relative; }
+    .nav-link::after {
+      content: ''; position: absolute; left: 0; bottom: -3px;
+      width: 0; height: 1px; background: #C8973A; transition: width 0.3s;
+    }
+    .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+
+    /* Hamburger open state */
+    .ham-open .bar1 { transform: translateY(6.5px) rotate(45deg); }
+    .ham-open .bar2 { opacity: 0; }
+    .ham-open .bar3 { transform: translateY(-6.5px) rotate(-45deg); }
+
+    /* Timeline left border */
+    .timeline-wrap { position: relative; padding-left: 2rem; }
+    .timeline-wrap::before {
+      content: ''; position: absolute; left: 0; top: 0; bottom: 0;
+      width: 1px; background: rgba(200,151,58,0.25);
+    }
+    .timeline-item { position: relative; }
+    .timeline-item::before {
+      content: ''; position: absolute;
+      left: calc(-2.5rem - 2px); top: 0.4rem;
+      width: 8px; height: 8px;
+      background: #C8973A; transform: rotate(45deg);
+    }
+
+    /* Hero/Story radial glow */
+    .glow-left  { background: radial-gradient(ellipse 80% 70% at 30% 50%, rgba(200,151,58,0.07), transparent 65%); }
+    .glow-panel { background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(200,151,58,0.09), transparent 75%); }
+
+    /* Value/Team card top-border reveal */
+    .card-top::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(to right, transparent, #C8973A, transparent);
+      opacity: 0; transition: opacity 0.3s;
+    }
+    .card-top:hover::before { opacity: 1; }
+
+    /* Team card bottom glow */
+    .team-card-glow::after {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 0;
+      background: linear-gradient(to top, rgba(200,151,58,0.07), transparent);
+      transition: height 0.4s;
+    }
+    .team-card-glow:hover::after { height: 100%; }
+  </style>
+</head>
+<body class="bg-brown-dark text-cream overflow-x-hidden leading-relaxed">
+
+  <!-- ═══════════════════════════════ NAV ═══════════════════════════════ -->
+  <nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between
+              px-6 md:px-16 h-[72px]
+              border-b border-gold-faint backdrop-blur-md"
+       style="background:linear-gradient(to bottom,rgba(26,12,4,0.97),transparent)">
+
+    <!-- Logo -->
+    <a href="#" class="font-display text-[1.9rem] font-semibold tracking-[0.12em] text-gold no-underline flex-shrink-0">
+      YALWA<span class="text-cream font-light italic">club</span>
+    </a>
+
+    <!-- Desktop links -->
+    <ul class="hidden md:flex items-center gap-10 list-none">
+      <li><a href="#" class="nav-link text-cream text-[0.7rem] tracking-[0.2em] uppercase font-medium hover:text-gold transition-colors">Home</a></li>
+      <li><a href="#" class="nav-link text-cream text-[0.7rem] tracking-[0.2em] uppercase font-medium hover:text-gold transition-colors">Menu</a></li>
+      <li><a href="#" class="nav-link active text-gold text-[0.7rem] tracking-[0.2em] uppercase font-medium transition-colors">About</a></li>
+      <li><a href="#" class="nav-link text-cream text-[0.7rem] tracking-[0.2em] uppercase font-medium hover:text-gold transition-colors">Contact</a></li>
+    </ul>
+
+    <!-- Desktop CTA -->
+    <a href="#" class="hidden md:inline-block border border-gold text-gold
+                       px-5 py-2 text-[0.7rem] tracking-[0.18em] uppercase
+                       hover:bg-gold hover:text-brown-dark transition-all duration-300">
+      Reserve a Table
+    </a>
+
+    <!-- Hamburger -->
+    <button id="hamburger" class="flex md:hidden flex-col gap-[5px] bg-transparent border-none p-1 cursor-pointer z-50">
+      <span class="bar1 block w-6 h-[1.5px] bg-cream transition-all duration-300"></span>
+      <span class="bar2 block w-6 h-[1.5px] bg-cream transition-all duration-300"></span>
+      <span class="bar3 block w-6 h-[1.5px] bg-cream transition-all duration-300"></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div id="mobileNav"
+       class="hidden fixed top-[72px] left-0 right-0 z-40 flex-col gap-6
+              px-6 py-8 border-b border-gold-faint
+              opacity-0 -translate-y-2 transition-all duration-300"
+       style="background:rgba(26,12,4,0.98);backdrop-filter:blur(16px)">
+    <a href="#" class="text-cream text-[0.75rem] tracking-[0.2em] uppercase font-medium hover:text-gold transition-colors">Home</a>
+    <a href="#" class="text-gold text-[0.75rem] tracking-[0.2em] uppercase font-medium">About</a>
+    <a href="#" class="text-cream text-[0.75rem] tracking-[0.2em] uppercase font-medium hover:text-gold transition-colors">Menu</a>
+    <a href="#" class="text-cream text-[0.75rem] tracking-[0.2em] uppercase font-medium hover:text-gold transition-colors">Contact</a>
+    <a href="#" class="border border-gold text-gold text-[0.72rem] tracking-[0.18em] uppercase
+                       px-5 py-3 text-center mt-2 hover:bg-gold hover:text-brown-dark transition-all">
+      Reserve a Table
+    </a>
+  </div>
+
+
+  <main>
+
+    <!-- ═══════════════════════════════ HERO (flex row) ═══════════════════════════════ -->
+    <section class="relative flex flex-col md:flex-row min-h-screen pt-[72px] overflow-hidden">
+      <div class="absolute inset-0 glow-left pointer-events-none"></div>
+
+      <!-- Left: Text -->
+      <div class="flex flex-col justify-center px-8 md:px-16 py-16 md:py-0 w-full md:w-1/2 relative z-10">
+        <p class="anim-hidden text-[0.68rem] tracking-[0.38em] uppercase text-gold mb-6"
+           style="animation:fadeUp 0.8s ease forwards 0.2s">Our Story</p>
+
+        <h1 class="anim-hidden font-display font-light leading-[1.05] text-cream mb-0"
+            style="font-size:clamp(3.2rem,7vw,6.5rem);animation:fadeUp 0.9s ease forwards 0.4s">
+          About<br><em class="text-gold not-italic italic">Yalwa</em>
+        </h1>
+
+        <!-- divider -->
+        <div class="anim-hidden flex items-center gap-4 my-8"
+             style="animation:fadeUp 0.8s ease forwards 0.6s">
+          <span class="block w-12 h-px bg-gold/25"></span>
+          <span class="block w-[6px] h-[6px] bg-gold rotate-45"></span>
+          <span class="block w-12 h-px bg-gold/25"></span>
+        </div>
+
+        <p class="anim-hidden text-[0.82rem] text-cream/60 max-w-sm leading-[1.9]"
+           style="animation:fadeUp 0.8s ease forwards 0.75s">
+          Born in Abuja, rooted in Nigerian tradition — Yalwa Club is where the finest local ingredients meet the rigour of world-class fine dining.
+        </p>
+
+        <div class="anim-hidden flex items-center gap-3 mt-12
+                    text-[0.62rem] tracking-[0.25em] uppercase text-muted"
+             style="animation:fadeUp 0.8s ease forwards 1s">
+          <span class="block w-px h-10 bg-gold/25"></span>
+          Scroll to discover
+        </div>
+      </div>
+
+      <!-- Right: Visual panel -->
+      <div class="relative flex flex-col items-center justify-center w-full md:w-1/2
+                  bg-brown-card border-t md:border-t-0 md:border-l border-gold-faint
+                  pt-12 px-8 overflow-hidden min-h-[420px] md:min-h-0">
+        <div class="absolute inset-0 glow-panel pointer-events-none"></div>
+
+        <!-- Lantern -->
+        <svg class="anim-hidden relative z-10 w-32" viewBox="0 0 120 180" fill="none"
+             style="animation:fadeUp 1s ease forwards 0.5s">
+          <rect x="42" y="0" width="36" height="12" rx="4" fill="#4A2A10"/>
+          <rect x="52" y="12" width="16" height="8" rx="2" fill="#5A3520"/>
+          <path d="M28 50 Q20 100 28 150 L92 150 Q100 100 92 50 Z" fill="#C8973A" opacity="0.2"/>
+          <path d="M32 52 Q24 100 32 148 L88 148 Q96 100 88 52 Z" fill="none" stroke="#C8973A" stroke-width="1.5" opacity="0.6"/>
+          <line x1="36" y1="52" x2="36" y2="148" stroke="#C8973A" stroke-width="0.8" opacity="0.4"/>
+          <line x1="48" y1="42" x2="48" y2="158" stroke="#C8973A" stroke-width="0.8" opacity="0.4"/>
+          <line x1="60" y1="40" x2="60" y2="160" stroke="#C8973A" stroke-width="0.8" opacity="0.4"/>
+          <line x1="72" y1="42" x2="72" y2="158" stroke="#C8973A" stroke-width="0.8" opacity="0.4"/>
+          <line x1="84" y1="52" x2="84" y2="148" stroke="#C8973A" stroke-width="0.8" opacity="0.4"/>
+          <circle cx="60" cy="100" r="20" fill="#C8973A" opacity="0.12"/>
+          <circle cx="60" cy="100" r="10" fill="#C8973A" opacity="0.28"/>
+          <ellipse cx="60" cy="155" rx="32" ry="5" fill="#4A2A10"/>
+          <rect x="52" y="155" width="16" height="8" rx="2" fill="#5A3520"/>
+          <line x1="60" y1="163" x2="60" y2="180" stroke="#C8973A" stroke-width="1.5" opacity="0.5"/>
+        </svg>
+
+        <!-- Quote -->
+        <div class="anim-hidden relative z-10 text-center mt-10 pt-8 max-w-[280px]
+                    border-t border-gold-faint"
+             style="animation:fadeUp 0.9s ease forwards 0.8s">
+          <p class="font-display italic text-[1.1rem] text-cream leading-relaxed">
+            "Yalwa is the Hausa word for prosperity — and that's exactly what we bring to your table."
+          </p>
+          <cite class="not-italic font-body text-[0.6rem] tracking-[0.2em] uppercase text-gold mt-4 block">
+            — Chef Aminu Garba, Founder
+          </cite>
+        </div>
+
+        <!-- Stats strip -->
+        <div class="relative z-10 w-full flex mt-10 border-t border-gold-faint">
+          <div class="flex-1 flex flex-col items-center py-5 border-r border-gold-faint">
+            <span class="font-display text-[2rem] font-light text-gold leading-none">6+</span>
+            <span class="text-[0.55rem] tracking-[0.18em] uppercase text-muted mt-1">Years</span>
+          </div>
+          <div class="flex-1 flex flex-col items-center py-5 border-r border-gold-faint">
+            <span class="font-display text-[2rem] font-light text-gold leading-none">48</span>
+            <span class="text-[0.55rem] tracking-[0.18em] uppercase text-muted mt-1">Dishes</span>
+          </div>
+          <div class="flex-1 flex flex-col items-center py-5">
+            <span class="font-display text-[2rem] font-light text-gold leading-none">85%</span>
+            <span class="text-[0.55rem] tracking-[0.18em] uppercase text-muted mt-1">Local</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════ STORY (flex row) ═══════════════════════════════ -->
+    <section class="px-6 md:px-16 py-24 max-w-[1400px] mx-auto">
+
+      <!-- Section divider -->
+      <div class="reveal flex items-center justify-center gap-4 mb-14">
+        <span class="block w-20 h-px bg-gold/25"></span>
+        <span class="block w-[7px] h-[7px] bg-gold rotate-45"></span>
+        <span class="block w-20 h-px bg-gold/25"></span>
+      </div>
+
+      <!-- Flex row: image | content -->
+      <div class="flex flex-col md:flex-row items-center gap-12 md:gap-20">
+
+        <!-- Image col -->
+        <div class="reveal relative w-full md:w-1/2 flex-shrink-0 pb-6 md:pb-0">
+          <div class="w-full border border-gold-faint bg-brown-card relative overflow-hidden flex items-center justify-center"
+               style="aspect-ratio:3/4">
+            <div class="absolute inset-0"
+                 style="background:radial-gradient(ellipse 60% 50% at 50% 55%,rgba(200,151,58,0.1),transparent 80%)"></div>
+            <svg class="w-28 opacity-85 relative z-10" viewBox="0 0 120 180" fill="none">
+              <rect x="42" y="0" width="36" height="12" rx="4" fill="#4A2A10"/>
+              <rect x="52" y="12" width="16" height="8" rx="2" fill="#5A3520"/>
+              <path d="M28 50 Q20 100 28 150 L92 150 Q100 100 92 50 Z" fill="#C8973A" opacity="0.2"/>
+              <path d="M32 52 Q24 100 32 148 L88 148 Q96 100 88 52 Z" fill="none" stroke="#C8973A" stroke-width="1.5" opacity="0.6"/>
+              <line x1="36" y1="52" x2="36" y2="148" stroke="#C8973A" stroke-width="0.8" opacity="0.4"/>
+              <line x1="48" y1="42" x2="48" y2="158" stroke="#C8973A" stroke-width="0.8" opacity="0.4"/>
+              <line x1="60" y1="40" x2="60" y2="160" stroke="#C8973A" stroke-width="0.8" opacity="0.4"/>
+              <line x1="72" y1="42" x2="72" y2="158" stroke="#C8973A" stroke-width="0.8" opacity="0.4"/>
+              <line x1="84" y1="52" x2="84" y2="148" stroke="#C8973A" stroke-width="0.8" opacity="0.4"/>
+              <circle cx="60" cy="100" r="20" fill="#C8973A" opacity="0.12"/>
+              <circle cx="60" cy="100" r="10" fill="#C8973A" opacity="0.28"/>
+              <ellipse cx="60" cy="155" rx="32" ry="5" fill="#4A2A10"/>
+              <rect x="52" y="155" width="16" height="8" rx="2" fill="#5A3520"/>
+            </svg>
+          </div>
+          <!-- Floating quote card — static on mobile, absolute on desktop -->
+          <div class="mt-4 md:mt-0 md:absolute md:bottom-[-1.5rem] md:right-[-2rem]
+                      bg-gold text-brown-dark p-7 max-w-[290px]
+                      font-display italic text-[1.05rem] leading-relaxed">
+            "Yalwa is the Hausa word for prosperity — and that's exactly what we bring to your table."
+            <cite class="not-italic font-body text-[0.62rem] tracking-[0.2em] uppercase
+                         text-brown-dark/70 block mt-4">
+              — Chef Aminu Garba, Founder
+            </cite>
+          </div>
+        </div>
+
+        <!-- Text col -->
+        <div class="flex flex-col w-full md:w-1/2">
+          <p class="reveal text-[0.68rem] tracking-[0.3em] uppercase text-gold mb-4">Est. 2019 · Abuja, Nigeria</p>
+          <h2 class="reveal font-display font-light leading-[1.1] text-cream mb-8"
+              style="font-size:clamp(2.2rem,4vw,3.8rem)">
+            Fine Dining with <em class="text-gold italic">Deep Roots</em>
+          </h2>
+          <p class="reveal text-[0.83rem] text-cream/70 mb-6 leading-[1.9]">
+            Yalwa Club was born from a simple belief: that Nigerian cuisine deserves the same reverence as the world's greatest culinary traditions. In 2019, Chef Aminu Garba — trained in Lagos, London, and Lyon — returned to Abuja with a vision to honour the flavours of his childhood with the rigour of fine dining.
+          </p>
+          <p class="reveal delay-1 text-[0.83rem] text-cream/70 mb-6 leading-[1.9]">
+            We source over 85% of our ingredients locally: yams from Kogi farmers, fresh seafood from the Niger Delta, heirloom pepper varieties from Borno, and palm oil cold-pressed on our partnered estate in Cross River.
+          </p>
+          <p class="reveal delay-2 text-[0.83rem] text-cream/70 mb-6 leading-[1.9]">
+            Beyond the food, Yalwa is a gathering place — for business dinners, anniversary celebrations, and Wednesday night jazz sessions that stretch past midnight. We believe the table is where community is built.
+          </p>
+
+          <!-- Stats row -->
+          <div class="reveal delay-3 flex border border-gold-faint mt-2">
+            <div class="flex-1 flex flex-col items-center py-5 border-r border-gold-faint px-2">
+              <span class="font-display text-[2.6rem] font-light text-gold leading-none">6+</span>
+              <span class="text-[0.58rem] tracking-[0.18em] uppercase text-muted mt-1">Years in Abuja</span>
+            </div>
+            <div class="flex-1 flex flex-col items-center py-5 border-r border-gold-faint px-2">
+              <span class="font-display text-[2.6rem] font-light text-gold leading-none">48</span>
+              <span class="text-[0.58rem] tracking-[0.18em] uppercase text-muted mt-1">Menu Items</span>
+            </div>
+            <div class="flex-1 flex flex-col items-center py-5 px-2">
+              <span class="font-display text-[2.6rem] font-light text-gold leading-none">85%</span>
+              <span class="text-[0.58rem] tracking-[0.18em] uppercase text-muted mt-1">Locally Sourced</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════ VALUES (flex row wrap) ═══════════════════════════════ -->
+    <section class="px-6 md:px-16 py-24"
+             style="background:linear-gradient(to bottom,transparent,rgba(200,151,58,0.03),transparent)">
+      <div class="max-w-[1400px] mx-auto">
+
+        <!-- Header -->
+        <div class="reveal flex flex-col items-center text-center mb-16">
+          <span class="text-[0.68rem] tracking-[0.3em] uppercase text-gold mb-3">What We Stand For</span>
+          <div class="flex items-center gap-4 my-3">
+            <span class="block w-20 h-px bg-gold/25"></span>
+            <span class="block w-[7px] h-[7px] bg-gold rotate-45"></span>
+            <span class="block w-20 h-px bg-gold/25"></span>
+          </div>
+          <h2 class="font-display font-light text-cream" style="font-size:clamp(2.2rem,4vw,3.5rem)">
+            Our <em class="text-gold italic">Philosophy</em>
+          </h2>
+        </div>
+
+        <!-- Cards row -->
+        <div class="flex flex-col md:flex-row gap-6">
+
+          <div class="reveal relative overflow-hidden flex flex-col flex-1
+                      border border-gold-faint bg-brown-card p-10
+                      card-top hover:-translate-y-1 hover:border-gold/50 transition-all duration-300">
+            <span class="text-[1.8rem] mb-5">🌾</span>
+            <h3 class="font-display text-[1.45rem] font-normal text-cream mb-3">Local First</h3>
+            <p class="text-[0.8rem] text-cream/60 leading-[1.85]">Every ingredient tells a story. We partner directly with Nigerian farmers, fishers, and artisan producers to bring the purest flavours from land to table.</p>
+          </div>
+
+          <div class="reveal delay-1 relative overflow-hidden flex flex-col flex-1
+                      border border-gold-faint bg-brown-card p-10
+                      card-top hover:-translate-y-1 hover:border-gold/50 transition-all duration-300">
+            <span class="text-[1.8rem] mb-5">🍽️</span>
+            <h3 class="font-display text-[1.45rem] font-normal text-cream mb-3">Culinary Mastery</h3>
+            <p class="text-[0.8rem] text-cream/60 leading-[1.85]">Tradition meets technique. Our chefs blend classical training with deep respect for Nigerian culinary heritage, creating dishes that are both familiar and extraordinary.</p>
+          </div>
+
+          <div class="reveal delay-2 relative overflow-hidden flex flex-col flex-1
+                      border border-gold-faint bg-brown-card p-10
+                      card-top hover:-translate-y-1 hover:border-gold/50 transition-all duration-300">
+            <span class="text-[1.8rem] mb-5">🤝</span>
+            <h3 class="font-display text-[1.45rem] font-normal text-cream mb-3">Community</h3>
+            <p class="text-[0.8rem] text-cream/60 leading-[1.85]">Yalwa is more than a restaurant. It's a space where deals are made, love is celebrated, and the music plays long after midnight. We gather people together.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════ TEAM (flex row wrap) ═══════════════════════════════ -->
+    <section class="px-6 md:px-16 py-24 max-w-[1400px] mx-auto">
+
+      <!-- Header -->
+      <div class="reveal flex flex-col items-center text-center mb-16">
+        <span class="text-[0.68rem] tracking-[0.3em] uppercase text-gold mb-3">The People Behind the Plate</span>
+        <div class="flex items-center gap-4 my-3">
+          <span class="block w-20 h-px bg-gold/25"></span>
+          <span class="block w-[7px] h-[7px] bg-gold rotate-45"></span>
+          <span class="block w-20 h-px bg-gold/25"></span>
+        </div>
+        <h2 class="font-display font-light text-cream" style="font-size:clamp(2.2rem,4vw,3.5rem)">
+          Meet the <em class="text-gold italic">Team</em>
+        </h2>
+      </div>
+
+      <!-- Cards row -->
+      <div class="flex flex-col md:flex-row gap-6">
+
+        <div class="reveal relative overflow-hidden flex flex-col items-center flex-1
+                    border border-gold-faint bg-brown-card px-8 py-12 text-center
+                    team-card-glow card-top hover:-translate-y-1 hover:border-gold/50 transition-all duration-300">
+          <div class="w-[88px] h-[88px] rounded-full bg-gold/10 border-2 border-gold/35
+                      flex items-center justify-center text-[2.1rem] mb-7">👨‍🍳</div>
+          <p class="font-display text-[1.45rem] font-normal text-cream mb-1">Aminu Garba</p>
+          <p class="text-[0.6rem] tracking-[0.2em] uppercase text-gold mb-5">Executive Chef & Founder</p>
+          <p class="text-[0.79rem] text-cream/55 leading-[1.8]">Trained in Lagos, London, and Lyon. Aminu returned to Abuja with a singular vision: to make Nigerian cuisine impossible to ignore on the world stage.</p>
+        </div>
+
+        <div class="reveal delay-1 relative overflow-hidden flex flex-col items-center flex-1
+                    border border-gold-faint bg-brown-card px-8 py-12 text-center
+                    team-card-glow card-top hover:-translate-y-1 hover:border-gold/50 transition-all duration-300">
+          <div class="w-[88px] h-[88px] rounded-full bg-gold/10 border-2 border-gold/35
+                      flex items-center justify-center text-[2.1rem] mb-7">👩‍🍳</div>
+          <p class="font-display text-[1.45rem] font-normal text-cream mb-1">Chidinma Okafor</p>
+          <p class="text-[0.6rem] tracking-[0.2em] uppercase text-gold mb-5">Head Pastry Chef</p>
+          <p class="text-[0.79rem] text-cream/55 leading-[1.8]">A graduate of Le Cordon Bleu with a deep love for Nigerian dessert traditions, Chidinma reimagines chin-chin, puff-puff, and groundnut brittle for the fine dining table.</p>
+        </div>
+
+        <div class="reveal delay-2 relative overflow-hidden flex flex-col items-center flex-1
+                    border border-gold-faint bg-brown-card px-8 py-12 text-center
+                    team-card-glow card-top hover:-translate-y-1 hover:border-gold/50 transition-all duration-300">
+          <div class="w-[88px] h-[88px] rounded-full bg-gold/10 border-2 border-gold/35
+                      flex items-center justify-center text-[2.1rem] mb-7">🥂</div>
+          <p class="font-display text-[1.45rem] font-normal text-cream mb-1">Ibrahim Al-Hassan</p>
+          <p class="text-[0.6rem] tracking-[0.2em] uppercase text-gold mb-5">Head Sommelier & Mixologist</p>
+          <p class="text-[0.79rem] text-cream/55 leading-[1.8]">Ibrahim curates a cellar that celebrates both Old World vintages and emerging African wine regions, alongside a cocktail menu rooted in Nigerian botanicals and palm spirits.</p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════ MILESTONES ═══════════════════════════════ -->
+    <section class="px-6 md:px-16 py-24 bg-brown-mid">
+      <div class="max-w-[900px] mx-auto">
+
+        <!-- Header -->
+        <div class="reveal flex flex-col items-center text-center mb-16">
+          <span class="text-[0.68rem] tracking-[0.3em] uppercase text-gold mb-3">How We Got Here</span>
+          <div class="flex items-center gap-4 my-3">
+            <span class="block w-20 h-px bg-gold/25"></span>
+            <span class="block w-[7px] h-[7px] bg-gold rotate-45"></span>
+            <span class="block w-20 h-px bg-gold/25"></span>
+          </div>
+          <h2 class="font-display font-light text-cream" style="font-size:clamp(2.2rem,4vw,3.5rem)">
+            Our <em class="text-gold italic">Journey</em>
+          </h2>
+        </div>
+
+        <div class="timeline-wrap flex flex-col gap-0">
+          <div class="reveal timeline-item pb-14 pl-10">
+            <p class="font-display text-[0.95rem] tracking-[0.12em] text-gold mb-1">2019</p>
+            <p class="font-display text-[1.6rem] font-normal text-cream mb-2">Doors Open</p>
+            <p class="text-[0.82rem] text-cream/60 max-w-lg leading-[1.85]">Yalwa Club opens its doors in the heart of Abuja with 12 tables and a menu of 24 dishes, all sourced within a 500km radius.</p>
+          </div>
+          <div class="reveal delay-1 timeline-item pb-14 pl-10">
+            <p class="font-display text-[0.95rem] tracking-[0.12em] text-gold mb-1">2020</p>
+            <p class="font-display text-[1.6rem] font-normal text-cream mb-2">Community Kitchen</p>
+            <p class="text-[0.82rem] text-cream/60 max-w-lg leading-[1.85]">Amid global uncertainty, we launched our Community Kitchen — feeding over 2,000 families across Abuja's underserved neighbourhoods.</p>
+          </div>
+          <div class="reveal delay-2 timeline-item pb-14 pl-10">
+            <p class="font-display text-[0.95rem] tracking-[0.12em] text-gold mb-1">2022</p>
+            <p class="font-display text-[1.6rem] font-normal text-cream mb-2">West Africa's Best New Restaurant</p>
+            <p class="text-[0.82rem] text-cream/60 max-w-lg leading-[1.85]">Recognised by Fine Dining Africa as one of the continent's most exciting culinary destinations, cementing Yalwa's place on the global map.</p>
+          </div>
+          <div class="reveal delay-3 timeline-item pl-10">
+            <p class="font-display text-[0.95rem] tracking-[0.12em] text-gold mb-1">2024</p>
+            <p class="font-display text-[1.6rem] font-normal text-cream mb-2">The Jazz Sessions</p>
+            <p class="text-[0.82rem] text-cream/60 max-w-lg leading-[1.85]">We introduced our Wednesday night live jazz programme, pairing seasonal tasting menus with Nigeria's finest emerging musicians.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════ CTA ═══════════════════════════════ -->
+    <section class="relative px-6 md:px-16 py-32 text-center overflow-hidden">
+      <div class="absolute inset-0 pointer-events-none"
+           style="background:radial-gradient(ellipse 60% 70% at 50% 50%,rgba(200,151,58,0.08),transparent 70%)"></div>
+      <span class="reveal block text-[0.68rem] tracking-[0.3em] uppercase text-gold mb-6">Experience Yalwa</span>
+      <h2 class="reveal font-display font-light text-cream mb-10 leading-[1.1]"
+          style="font-size:clamp(2.2rem,5vw,4.5rem)">
+        Come to the <em class="text-gold italic">Table</em>
+      </h2>
+      <div class="reveal delay-1 flex flex-wrap justify-center gap-4">
+        <a href="#" class="bg-gold text-brown-dark border border-gold
+                           px-10 py-4 text-[0.72rem] tracking-[0.2em] uppercase font-medium
+                           hover:bg-transparent hover:text-gold transition-all duration-300">
+          Reserve a Table
+        </a>
+        <a href="#" class="border border-gold text-gold
+                           px-10 py-4 text-[0.72rem] tracking-[0.2em] uppercase font-medium
+                           hover:bg-gold hover:text-brown-dark transition-all duration-300">
+          View Our Menu
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+  <footer class="border-t border-gold-faint px-6 md:px-16 py-16 text-center">
+    <p class="font-display text-[2.8rem] font-light text-gold tracking-widest mb-2">YALWA</p>
+    <p class="text-[0.68rem] tracking-[0.3em] uppercase text-muted mb-10">Fine Dining & Lounge · Abuja, Nigeria</p>
+
+    <ul class="flex flex-wrap justify-center gap-8 md:gap-10 list-none mb-10">
+      <li><a href="#" class="text-muted text-[0.7rem] tracking-[0.2em] uppercase hover:text-gold transition-colors">Home</a></li>
+      <li><a href="#" class="text-muted text-[0.7rem] tracking-[0.2em] uppercase hover:text-gold transition-colors">Menu</a></li>
+      <li><a href="#" class="text-muted text-[0.7rem] tracking-[0.2em] uppercase hover:text-gold transition-colors">About</a></li>
+      <li><a href="#" class="text-muted text-[0.7rem] tracking-[0.2em] uppercase hover:text-gold transition-colors">Contact</a></li>
+      <li><a href="#" class="text-muted text-[0.7rem] tracking-[0.2em] uppercase hover:text-gold transition-colors">Privacy</a></li>
+    </ul>
+
+    <div class="flex justify-center gap-4 mb-10">
+      <a href="#" title="Instagram"
+         class="w-10 h-10 flex items-center justify-center border border-gold-faint
+                text-muted hover:border-gold hover:text-gold transition-all">📷</a>
+      <a href="#" title="Facebook"
+         class="w-10 h-10 flex items-center justify-center border border-gold-faint
+                text-muted hover:border-gold hover:text-gold transition-all">📘</a>
+      <a href="#" title="Twitter/X"
+         class="w-10 h-10 flex items-center justify-center border border-gold-faint
+                text-muted hover:border-gold hover:text-gold transition-all">🐦</a>
+      <a href="#" title="WhatsApp"
+         class="w-10 h-10 flex items-center justify-center border border-gold-faint
+                text-muted hover:border-gold hover:text-gold transition-all">💬</a>
+    </div>
+
+    <p class="text-[0.68rem] tracking-widest text-muted/40">© 2025 Yalwa Club. All rights reserved. Crafted with ♥ in Abuja.</p>
+  </footer>
+
+
+  <script>
+    /* ── Hamburger ── */
+    const ham    = document.getElementById('hamburger');
+    const mobNav = document.getElementById('mobileNav');
+    ham.addEventListener('click', () => {
+      ham.classList.toggle('ham-open');
+      const isOpen = ham.classList.contains('ham-open');
+      mobNav.classList.toggle('hidden', !isOpen);
+      mobNav.classList.toggle('flex', isOpen);
+      setTimeout(() => {
+        mobNav.style.opacity  = isOpen ? '1' : '0';
+        mobNav.style.transform = isOpen ? 'translateY(0)' : 'translateY(-8px)';
+      }, 10);
+    });
+    mobNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      ham.classList.remove('ham-open');
+      mobNav.classList.add('hidden'); mobNav.classList.remove('flex');
+      mobNav.style.opacity = '0';
+    }));
+
+    /* ── Scroll reveal ── */
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
