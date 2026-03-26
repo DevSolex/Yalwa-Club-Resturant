@@ -9,6 +9,7 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-blue-500: oklch(62.3% 0.214 259.815);
+    --color-blue-600: oklch(54.6% 0.245 262.881);
     --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-gray-600: oklch(44.6% 0.03 256.802);
     --color-gray-700: oklch(37.3% 0.034 259.733);
@@ -293,14 +294,8 @@
   .mt-16 {
     margin-top: calc(var(--spacing) * 16);
   }
-  .mt-18 {
-    margin-top: calc(var(--spacing) * 18);
-  }
   .mt-20 {
     margin-top: calc(var(--spacing) * 20);
-  }
-  .mt-28 {
-    margin-top: calc(var(--spacing) * 28);
   }
   .mt-32 {
     margin-top: calc(var(--spacing) * 32);
@@ -785,9 +780,6 @@
   .font-\[Cormorant_Garamond\] {
     font-family: Cormorant Garamond;
   }
-  .font-sans {
-    font-family: var(--font-sans);
-  }
   .font-serif {
     font-family: var(--font-serif);
   }
@@ -798,10 +790,6 @@
   .text-3xl {
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
-  }
-  .text-6xl {
-    font-size: var(--text-6xl);
-    line-height: var(--tw-leading, var(--text-6xl--line-height));
   }
   .text-8xl {
     font-size: var(--text-8xl);
@@ -1231,10 +1219,24 @@
       }
     }
   }
+  .hover\:bg-\[\#2A1206\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: #2A1206;
+      }
+    }
+  }
   .hover\:bg-\[\#C8973A\] {
     &:hover {
       @media (hover: hover) {
         background-color: #C8973A;
+      }
+    }
+  }
+  .hover\:bg-blue-600 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-blue-600);
       }
     }
   }
@@ -1382,12 +1384,6 @@
   .sm\:grid-cols-2 {
     @media (width >= 40rem) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-  }
-  .sm\:text-4xl {
-    @media (width >= 40rem) {
-      font-size: var(--text-4xl);
-      line-height: var(--tw-leading, var(--text-4xl--line-height));
     }
   }
   .md\:flex {
